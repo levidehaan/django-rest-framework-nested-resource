@@ -198,7 +198,7 @@ def find_parent_to_child_manager(parent_obj, child_model):
     def is_relation_to_child_model(rel):
         if isinstance(rel, GenericRel):
             return issubclass(rel.to, child_model)
-        if isinstance(rel, RelatedObject):
+        if isinstance(rel, ForeignObjectRel):
             if isinstance(parent_obj, rel.parent_model) and issubclass(rel.model, child_model):
                 return True
             # reverse
