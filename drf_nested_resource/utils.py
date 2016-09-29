@@ -5,7 +5,7 @@ from django.db import models
 from django.db.models.fields import FieldDoesNotExist
 from django.db.models.fields.related import (
     ManyRelatedObjectsDescriptor,
-    RelatedObject,
+    ForeignObjectRel,
 )
 
 from django.core.exceptions import ImproperlyConfigured
